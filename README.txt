@@ -1,5 +1,7 @@
 Learning Vim.  In 2010.  Heaven help me.
 
+Weening myself off TextMate, one day at a time.
+
 As a vim neophyte, I can confidently say you're better off 
 finding useful vim bits in a box of Count Chocula than here.
 
