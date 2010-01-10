@@ -5,6 +5,11 @@ Weening myself off TextMate, one day at a time.
 As a vim neophyte, I can confidently say you're better off 
 finding useful vim bits in a box of Count Chocula than here.
 
+Nothing particularly noteworthy in here, except that I'm 
+keeping a particular emphasis on maintaining a consistent 
+cross-platform experience across OS X, Windows, and Linux, 
+since that's my main reason for finally migrating from TM.
+
 Installation:
 
 *nix (MacVim/GVim)
