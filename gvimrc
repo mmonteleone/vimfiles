@@ -15,7 +15,9 @@ set anti " Antialias font
 
 " Tab headings 
 set gtl=%t gtt=%F
-
+set guioptions-=m  " get rid of menu
+" set guioptions-=r  " get rid of scroll bars
+set guioptions-=L
 
 " OS Specific *****************************************************************
 
@@ -25,9 +27,9 @@ if has("gui_macvim")
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
   set guifont=Monaco:h12
   set guioptions-=T  " remove toolbar
-  set stal=2 " turn on tabs by default
+"  set stal=2 " turn on tabs by default
   set columns=160 
-  set lines=49
+  set lines=49 
   
 " GVim Linux -----------------------------------------------------------------
 elseif has("gui_gtk2")
@@ -48,7 +50,7 @@ elseif has("gui_win32")
   set guioptions-=T
   set columns=160
   set lines=47
-  set stal=2
+"  set stal=2
 
 end
 

@@ -16,7 +16,7 @@ set si " smartindent	(local to buffer)
 " Scrollbars ------------------------------------------------------------------
 set sidescrolloff=2
 set numberwidth=4
-" set scrolloff=3
+set scrolloff=3
 " set sidescrolloff=7
 " set sidescroll=1
 
@@ -78,6 +78,11 @@ nmap ,s :split<CR> <C-w><C-w>
 
 " Make it way easier to switch windows (,w)
 nmap ,w <C-w><C-w>_
+" save
+map ,s :w<CR>
+" exit vim without saving any changes
+map ,q :q<CR>
+
 
 " Fast split movement
 set wmh=0
@@ -187,6 +192,10 @@ endif
 " -----------------------------------------------------------------------------  
 
 " NERDTree --------------------------------------------------------------------
+" Nerd Tree on right
+let NERDTreeWinPos = 'right'
+
+" Open nerd tree with ,n
 :noremap ,n :NERDTreeToggle<CR>
 
 " User instead of Netrw when doing an edit /foobar
@@ -195,10 +204,13 @@ let NERDTreeHijackNetrw=1
 " Single click for everything
 let NERDTreeMouseMode=1
 
+let NERDTreeChDirMode=2 "change working dir as root changed
+let NERDTreeSplitVertical=1 "vsplit
+
 
 " fuzzyfinder_textmate --------------------------------------------------------
-map ,f :FuzzyFinderTextMate<CR>
-map ,b :FuzzyFinderBuffer<CR>
+map ,t :FuzzyFinderTextMate<CR>
+map ,g :FuzzyFinderBuffer<CR>
 let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db;.dll'
 let g:fuzzy_matching_limit=60 " this seems to help performance
 let g:fuzzy_ceiling=20000     " I have some projects with a lot of files...
@@ -297,6 +309,7 @@ endfunction
 " -----------------------------------------------------------------------------  
 " Open NERDTree on start
 autocmd VimEnter * exe 'NERDTree' | wincmd l 
+autocmd VimEnter * exe 'normal ,w'
 
 " -----------------------------------------"
 if has("gui")
