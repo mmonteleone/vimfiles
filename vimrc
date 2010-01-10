@@ -209,7 +209,7 @@ let NERDTreeSplitVertical=1 "vsplit
 
 
 " fuzzyfinder_textmate --------------------------------------------------------
-map ,t :FuzzyFinderTextMate<CR>
+map ,f :FuzzyFinderTextMate<CR>
 map ,g :FuzzyFinderBuffer<CR>
 let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db;.dll'
 let g:fuzzy_matching_limit=60 " this seems to help performance

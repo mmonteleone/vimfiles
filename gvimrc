@@ -28,7 +28,7 @@ if has("gui_macvim")
   set guifont=Monaco:h12
   set guioptions-=T  " remove toolbar
 "  set stal=2 " turn on tabs by default
-  set columns=160 
+  set columns=150 
   set lines=49 
   
 " GVim Linux -----------------------------------------------------------------
