@@ -1,3 +1,6 @@
+" Bundle structure powered by Pathogen
+call pathogen#runtime_append_all_bundles() 
+
 " -----------------------------------------------------------------------------  
 " |                              General                                      |
 " -----------------------------------------------------------------------------  
@@ -220,7 +223,7 @@ let g:fuzzy_ceiling=20000     " I have some projects with a lot of files...
 augroup mkd
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
-map <leader>x :w!<CR>:!$VIMFILES/perl/markdown.pl % > %.html && open %.html<CR><CR> 
+map <leader>x :w!<CR>:!perl $VIMFILES/markdown/perl/markdown.pl % > %.html && open %.html<CR><CR> 
 
 " -----------------------------------------------------------------------------  
 " |                               Status Line Setup                           |

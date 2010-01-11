@@ -25,7 +25,7 @@ ruby << RUBY
   processor, platform, *rest = RUBY_PLATFORM.split("-")  
   vimfiles = platform == 'mswin32' || platform == 'mingw32' ? 'vimfiles' : '.vim'
   begin
-    require "#{ENV['HOME']}/#{vimfiles}/ruby/fuzzy_file_finder"
+    require "#{ENV['HOME']}/#{vimfiles}/bundle/fuzzyfinder_textmate/ruby/fuzzy_file_finder"
   rescue LoadError
     begin
       require 'rubygems'
